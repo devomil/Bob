@@ -195,4 +195,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Issues: https://github.com/yourusername/bob-ai/issues
 
 ---
-Made with ❤️ by [Your Name]# Bob
+Made with ❤️ by [Homer]# Bob
