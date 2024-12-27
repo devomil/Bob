@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <!-- Mystical glow -->
+    <filter id="mystical-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Ethereal core gradient -->
+    <radialGradient id="ethereal-core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7B68EE"/>
+      <stop offset="50%" stop-color="#4B0082"/>
+      <stop offset="100%" stop-color="#191970"/>
+    </radialGradient>
+    
+    <!-- Magical aura gradient -->
+    <radialGradient id="magical-aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9400D3" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#4B0082" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#191970" stop-opacity="0"/>
+    </radialGradient>
+    
+    <!-- Constellation pattern -->
+    <pattern id="stars" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.5" fill="white" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="40" cy="40" r="0.5" fill="white" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.1;0.5" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="25" cy="25" r="0.5" fill="white" opacity="0.3">
+        <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4s" repeatCount="indefinite"/>
+      </circle>
+    </pattern>
+  </defs>
+
+  <!-- Star field background -->
+  <rect width="400" height="400" fill="#000B1F"/>
+  <rect width="400" height="400" fill="url(#stars)"/>
+
+  <!-- Outer cosmic rings -->
+  <g stroke="#9400D3" fill="none" filter="url(#mystical-glow)">
+    <!-- Rotating galaxy ring -->
+    <path d="M200,50 A150,150 0 0,1 350,200 A150,150 0 0,1 200,350 A150,150 0 0,1 50,200 A150,150 0 0,1 200,50" 
+          stroke-width="1" opacity="0.3">
+      <animateTransform attributeName="transform"
+                        type="rotate"
+                        from="0 200 200"
+                        to="360 200 200"
+                        dur="20s"
+                        repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Pulsing mystic circles -->
+    <circle cx="200" cy="200" r="160" stroke-width="2" opacity="0.4">
+      <animate attributeName="r" values="160;170;160" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.1;0.4" dur="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Ethereal mist -->
+  <g opacity="0.5">
+    <path d="M100,200 Q200,150 300,200" stroke="#7B68EE" fill="none" stroke-width="20" filter="url(#mystical-glow)">
+      <animate attributeName="d" 
+               values="M100,200 Q200,150 300,200;M100,200 Q200,250 300,200;M100,200 Q200,150 300,200" 
+               dur="6s" 
+               repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Core orb -->
+  <circle cx="200" cy="200" r="120" fill="url(#ethereal-core)" filter="url(#mystical-glow)"/>
+
+  <!-- Eyes with cosmic effect -->
+  <g transform="translate(0, -20)">
+    <!-- Left eye -->
+    <circle cx="160" cy="200" r="20" fill="#000B1F"/>
+    <circle cx="160" cy="200" r="15" fill="#7B68EE"/>
+    <circle cx="160" cy="200" r="8" fill="#ffffff"/>
+    <circle cx="165" cy="197" r="3" fill="#9400D3"/>
+    
+    <!-- Right eye -->
+    <circle cx="240" cy="200" r="20" fill="#000B1F"/>
+    <circle cx="240" cy="200" r="15" fill="#7B68EE"/>
+    <circle cx="240" cy="200" r="8" fill="#ffffff"/>
+    <circle cx="245" cy="197" r="3" fill="#9400D3"/>
+  </g>
+
+  <!-- Mystical energy waves -->
+  <g transform="translate(0, 40)" stroke="#9400D3" stroke-width="2">
+    <path d="M140 200 Q200 180 260 200" fill="none" filter="url(#mystical-glow)">
+      <animate attributeName="d"
+               values="M140 200 Q200 180 260 200;M140 200 Q200 220 260 200;M140 200 Q200 180 260 200"
+               dur="3s"
+               repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Floating runes -->
+  <g fill="#7B68EE" filter="url(#mystical-glow)">
+    <g transform="translate(120, 160)">
+      <circle r="3">
+        <animate attributeName="opacity" values="1;0.2;1" dur="3s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <g transform="translate(280, 160)">
+      <circle r="3">
+        <animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <g transform="translate(200, 120)">
+      <circle r="3">
+        <animate attributeName="opacity" values="0.6;0.1;0.6" dur="4s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Spiraling energy -->
+  <path d="M200,200 m-75,0 a75,75 0 1,0 150,0 a75,75 0 1,0 -150,0" 
+        stroke="#7B68EE" 
+        fill="none" 
+        stroke-width="1" 
+        opacity="0.3"
+        filter="url(#mystical-glow)">
+    <animateTransform attributeName="transform"
+                      type="rotate"
+                      from="0 200 200"
+                      to="-360 200 200"
+                      dur="10s"
+                      repeatCount="indefinite"/>
+  </path>
+</svg>
