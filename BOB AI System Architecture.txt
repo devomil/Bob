@@ -1,0 +1,49 @@
+graph TB
+    subgraph BOB AI Core
+        Main[BOB AI Main Controller]
+        CodeA[Code Analyzer]
+        CodeG[Code Generator]
+        Screen[Screen Interactor]
+        Learn[Learning Module]
+    end
+
+    subgraph Language Processing
+        LP[Language Processor]
+        LP --> |Parse| PY[Python]
+        LP --> |Parse| JS[JavaScript]
+        LP --> |Parse| JAV[Java]
+        LP --> |Parse| CPP[C++]
+        LP --> |Parse| RS[Rust]
+        LP --> |Parse| GO[Go]
+    end
+
+    subgraph Screen Interaction
+        SI[Screen Interface]
+        SI --> OCR[Text Recognition]
+        SI --> Click[Element Detection]
+        SI --> Cap[Screen Capture]
+    end
+
+    subgraph Code Generation
+        CG[Generation Engine]
+        CG --> Temp[Templates]
+        CG --> Model[ML Models]
+        CG --> Format[Code Formatter]
+    end
+
+    subgraph Learning System
+        LS[Learning Controller]
+        LS --> Git[Repository Analysis]
+        LS --> Parse[Code Parsing]
+        LS --> Store[Knowledge Storage]
+    end
+
+    Main --> |Analyze| CodeA
+    Main --> |Generate| CodeG
+    Main --> |Interact| Screen
+    Main --> |Learn| Learn
+
+    CodeA --> LP
+    Screen --> SI
+    CodeG --> CG
+    Learn --> LS

@@ -1,0 +1,14 @@
+# Core dependencies
+transformers      # For code generation models
+pytorch          # ML backend
+opencv-python    # Screen analysis
+pytesseract     # OCR capabilities
+pyautogui       # Screen interaction
+gitpython       # Repository management
+numpy           # Numerical operations
+pillow          # Image processing
+
+# Language-specific formatters
+black           # Python formatting
+prettier        # JavaScript formatting
+clang-format    # C++ formatting
