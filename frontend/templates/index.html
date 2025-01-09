@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOB AI Interface</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>BOB AI Interface</h1>
+        <p>Interact with BOB through this web interface.</p>
+
+        <!-- Input form for user queries -->
+        <form id="input-form">
+            <div class="input-section">
+                <label for="user-input">Enter your query:</label>
+                <textarea id="user-input" placeholder="Type your question or command..."></textarea>
+                <button type="submit">Send</button>
+            </div>
+        </form>
+
+        <!-- Response display section -->
+        <div id="response-container">
+            <h2>Response:</h2>
+            <p id="response"></p>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
